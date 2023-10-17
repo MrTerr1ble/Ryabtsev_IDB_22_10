@@ -18,10 +18,6 @@ public class forCube : MonoBehaviour
     public GameObject Cylinder;
 
 
-    public GameObject cam;
-
-    public GameObject bcam;
-
     void Start()
     {
 
@@ -38,6 +34,30 @@ public class forCube : MonoBehaviour
         {
             transform.Translate(Vector3.forward * Speed * Time.deltaTime);
         }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector2.left * Speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(Vector3.back * Speed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector2.right * Speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            transform.Translate(Vector3.up * Speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.Translate(Vector3.down * Speed * Time.deltaTime);
+        }
     }
 
 
@@ -47,9 +67,8 @@ public class forCube : MonoBehaviour
     }
 
 
- 
-       
-    }
+
+}
 
 
 
